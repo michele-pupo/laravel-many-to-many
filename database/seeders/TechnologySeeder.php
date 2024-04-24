@@ -13,7 +13,8 @@ class TechnologySeeder extends Seeder
      */
     public function run(): void
     {
-        $technlogies = ['html',
+        $technlogies = [
+                        'html',
                         'css',
                        ];
 

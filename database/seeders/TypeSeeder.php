@@ -14,9 +14,9 @@ class TypeSeeder extends Seeder
     public function run(): void
     {
         $types = [
-            'front-end',
-            'back-end'
-        ];
+                  'front-end',
+                  'back-end'
+                 ];
 
         foreach ($types as $type) {
 

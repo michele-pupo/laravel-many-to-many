@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TechnologyController;
 use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,5 +57,8 @@ Route::middleware(['auth', 'verified'])
 
             // rotta di risorsa per i tipi di progetti
             Route::resource('types', TypeController::class);
+
+            // rotta di risorsa per le tecnologie dei progetti
+            Route::resource('technlogies', TechnologyController::class);
         }
 );
