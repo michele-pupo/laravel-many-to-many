@@ -67,6 +67,29 @@
                @endforeach 
             </select>
         </div>
+
+        <div class="mb-3">
+            <label for="">Tecnologie</label>
+            <div class="d-flex gap-3">
+                @foreach($technologies as $technology)
+                <div class="form-check">
+                    <input 
+                        type="checkbox" 
+                        name="technology[]" 
+                        value="{{$technology->id}}" 
+                        class="form-check-input" 
+                        id="technology-{{$technology->id}}"
+                        {{in_array($technology->id, old('technologies', [])) ? 'checked' : ''}}
+                    >
+                    <label 
+                        class="form-check-label" 
+                        for="technology-{{$technology->id}}"
+                    >{{$technology->title}}</label>
+                </div>
+                @endforeach
+            </div>
+        </div>
+
         <button type="submit" class="btn btn-primary">Salva</button>
         <a href="{{ route('admin.projects.index') }}" class="btn btn-secondary">Indietro</a>
     </form>

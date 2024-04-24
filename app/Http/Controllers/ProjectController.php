@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Models\Technology;
 use Illuminate\Http\Request;
 USE App\Http\Requests\StoreProjectRequest;
 use Illuminate\Support\Facades\Validator;
@@ -31,7 +32,9 @@ class ProjectController extends Controller
     {
         $types = Type::all();
 
-        return view('admin.projects.create', compact('types'));
+        $technologies = Technology::all();
+
+        return view('admin.projects.create', compact('types', 'technologies'));
     }
 
     /**
@@ -60,7 +63,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        dd($project->technologies);
+        // dd($project->technologies);
         return view('admin.projects.show', compact('project'));
     }
 
