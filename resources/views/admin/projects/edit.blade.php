@@ -95,7 +95,7 @@
                         value="{{$technology->id}}" 
                         class="form-check-input" 
                         id="technology-{{$technology->id}}"
-                        {{$project->technologies->contains($technology) ? 'checked' : ''}}
+                        {{in_array($technology->id, old('technologies', [])) ? 'checked' : ''}}
                     >
                     @endif
                     <label 

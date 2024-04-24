@@ -12,6 +12,7 @@
     <a href="{{route('admin.projects.index')}}" class="btn btn-info">Visualizza progetti</a>
     <a href="{{route('admin.projects.create')}}" class="btn btn-success">Aggiungi nuovo progetto</a>
     <a href="{{route('admin.types.index')}}" class="btn btn-danger">Gestisci tipologie di progetto</a>
+    <a href="{{route('admin.technologies.index')}}" class="btn btn-warning">Gestisci le tecnologie usate</a>
 
 </div>
 

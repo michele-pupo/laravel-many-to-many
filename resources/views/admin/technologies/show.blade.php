@@ -7,7 +7,7 @@
     <div class="d-flex flex-column gap-3 align-items-center">
         <h2 class="fw-bold display-3">{{$technology->title}}</h2>
         <div class="text-center">
-            <span class="badge rounded-pill" style="background-color: {{$technology->color}}">{{$technology->title}}</span>
+            <span class="badge rounded-pill text-black text-uppercase fw-bold" style="background-color: {{$technology->color}}">{{$technology->title}}</span>
             
         </div>
         <div class="container justify-content-center d-flex gap-5">

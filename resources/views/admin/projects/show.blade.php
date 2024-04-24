@@ -11,7 +11,7 @@
             <p class="fs-5">{{$project->description}}</p>
             <div>
                 @foreach($project->technologies as $technology)
-                <span class="badge rounded-pill" style="background-color: {{$technology->color ?? 'rgba(255,255,255,.4)'}}">{{$technology->title}}</span>
+                    <span class="badge rounded-pill" style="background-color: {{$technology->color ?? 'rgba(255,255,255,.4)'}}">{{$technology->title}}</span>
                 @endforeach
             </div>
             <h6 class="text-danger fs-3">{{$project->type?->title}}</h6>

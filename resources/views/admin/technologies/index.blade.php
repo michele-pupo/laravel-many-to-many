@@ -21,7 +21,7 @@
             <tr>
                 <th scope="row">{{$loop->index + 1}}</th>
                 <td>{{$technology->title}}</td>
-                <td><span class="badge rounded-pill" style="background-color: {{$technology->color}}">{{$technology->title}}</span></td>
+                <td><span class="badge rounded-pill text-black text-uppercase fw-bold" style="background-color: {{$technology->color}}">{{$technology->title}}</span></td>
                 <td><a href="{{route('admin.technologies.show', $technology->id)}}" class="btn btn-info">Mostra</a></td>
                 <td><a href="{{route('admin.technologies.edit', $technology->id)}}" class="btn btn-warning">Modifica</a></td>
             </tr>

@@ -25,7 +25,6 @@ class StoreProjectRequest extends FormRequest
             'name' => 'required|max:255',
             'description' =>'required|max:5000',
             'project_image' => 'file|max:4096|required|mimes:jpg,bmp,png',
-            'used_technologies' => 'required|max:255',
             'project_date' => 'required|date',
             'link_github' => 'required|max:255',
             'type_id'=> 'nullable|exists:types,id',
@@ -50,7 +49,6 @@ class StoreProjectRequest extends FormRequest
             'name' => 'nome',
             'description' => 'descrizione',
             'project_image' => 'immagine progetto',
-            'used_technologies' => 'tecnologie usate',
             'project_date' => 'data di consegna',
             'link_github' => 'link_github',
         ];

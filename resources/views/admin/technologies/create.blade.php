@@ -19,12 +19,7 @@
 
         <div class="mb-3">
             <label for="color" class="form-label">Colore</label>
-            <input type="color" @error('color') is-invalid @enderror" name="color">{{old('color')}}</input>
-            @error('color')
-            <div class="invalid-feedback">
-                {{$message}}
-            </div>
-            @enderror
+            <input type="color" name="color">{{old('color')}}</input>
         </div>
 
        
