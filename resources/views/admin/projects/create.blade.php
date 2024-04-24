@@ -75,7 +75,7 @@
                 <div class="form-check">
                     <input 
                         type="checkbox" 
-                        name="technology[]" 
+                        name="technologies[]" 
                         value="{{$technology->id}}" 
                         class="form-check-input" 
                         id="technology-{{$technology->id}}"

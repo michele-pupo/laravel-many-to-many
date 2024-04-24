@@ -82,20 +82,20 @@
 
                     <input 
                         type="checkbox" 
-                        name="technology[]" 
+                        name="technologies[]" 
                         value="{{$technology->id}}" 
                         class="form-check-input" 
-                        id="technology-{{$technology->id}}"
-                        {{in_array($technology->id, old('technologies', [])) ? 'checked' : ''}}
+                        id="technology-{{$technology->id}}" 
+                        {{in_array($technology->id, old('technologies', $project->technologies->pluck('id')->toArray())) ? 'checked' : ''}}
                     >
                     @else
                     <input 
                         type="checkbox" 
-                        name="technology[]" 
+                        name="technologies[]" 
                         value="{{$technology->id}}" 
                         class="form-check-input" 
-                        id="technology-{{$technology->id}}"
-                        {{in_array($technology->id, old('technologies', [])) ? 'checked' : ''}}
+                        id="technology-{{$technology->id}}" 
+                        {{in_array($technology->id, old('technologies', $project->technologies->pluck('id')->toArray())) ? 'checked' : ''}}
                     >
                     @endif
                     <label 

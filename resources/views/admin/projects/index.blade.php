@@ -24,6 +24,11 @@
                 <th scope="row">{{$loop->index + 1}}</th>
                 <td>{{$project->name}}</td>
                 <td>{{$project->description}}</td>
+                <td>
+                    @foreach($project->technologies as $technology)
+                        <span class="badge rounded-pill text-black text-uppercase fw-bold" style="background-color: {{$technology->color ?? 'rgba(255,255,255,.4)'}}">{{$technology->title}}</span>
+                    @endforeach
+                </td>
                 <td>{{ \Carbon\Carbon::parse($project->project_date)->format('d/m/Y') }}</td>
                 <td><a href="{{route('admin.projects.show', $project->id)}}" class="btn btn-info">Mostra</a></td>
                 <td><a href="{{route('admin.projects.edit', $project->id)}}" class="btn btn-warning">Modifica</a></td>
