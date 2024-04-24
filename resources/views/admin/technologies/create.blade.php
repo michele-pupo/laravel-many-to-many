@@ -18,8 +18,8 @@
         </div>
 
         <div class="mb-3">
-            <label for="description" class="form-label">Colore</label>
-            <input type="color" class="form-control @error('color') is-invalid @enderror" name="color">{{old('color')}}</input>
+            <label for="color" class="form-label">Colore</label>
+            <input type="color" @error('color') is-invalid @enderror" name="color">{{old('color')}}</input>
             @error('color')
             <div class="invalid-feedback">
                 {{$message}}

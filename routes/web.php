@@ -59,6 +59,6 @@ Route::middleware(['auth', 'verified'])
             Route::resource('types', TypeController::class);
 
             // rotta di risorsa per le tecnologie dei progetti
-            Route::resource('technlogies', TechnologyController::class);
+            Route::resource('technologies', TechnologyController::class);
         }
 );
