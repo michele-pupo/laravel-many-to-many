@@ -42,16 +42,6 @@
         </div>
 
         <div class="mb-3">
-            <label for="used_technologies" class="form-label">Tecnologie usate</label>
-            <input type="text" class="form-control @error('used_technologies') is-invalid @enderror" name="used_technologies" value="{{old('used_technologies') ?? $project->used_technologies}}" required>
-            @error('used_technologies')
-            <div class="invalid-feedback">
-                {{$message}}
-            </div>
-            @enderror
-        </div>
-
-        <div class="mb-3">
             <label for="project_date" class="form-label">Data di consegna</label>
             <input type="date" class="form-control @error('project_date') is-invalid @enderror" name="project_date" value="{{old('project_date') ?? $project->project_date}}" required>
             @error('project_date')

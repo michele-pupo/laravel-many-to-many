@@ -24,7 +24,6 @@
                 <th scope="row">{{$loop->index + 1}}</th>
                 <td>{{$project->name}}</td>
                 <td>{{$project->description}}</td>
-                <td>{{$project->used_technologies}}</td>
                 <td>{{ \Carbon\Carbon::parse($project->project_date)->format('d/m/Y') }}</td>
                 <td><a href="{{route('admin.projects.show', $project->id)}}" class="btn btn-info">Mostra</a></td>
                 <td><a href="{{route('admin.projects.edit', $project->id)}}" class="btn btn-warning">Modifica</a></td>
