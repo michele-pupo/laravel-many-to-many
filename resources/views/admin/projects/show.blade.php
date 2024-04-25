@@ -9,12 +9,12 @@
         <img class="w-75" src="{{asset('storage/' . $project->project_image)}}" alt="Copertina progetto">
         <div class="text-center">
             <p class="fs-5">{{$project->description}}</p>
-            <div>
+            <div class="pb-3">
                 @foreach($project->technologies as $technology)
                     <span class="badge rounded-pill text-black text-uppercase fw-bold" style="background-color: {{$technology->color ?? 'rgba(255,255,255,.4)'}}">{{$technology->title}}</span>
                 @endforeach
             </div>
-            <h6 class="text-danger fs-3">{{$project->type?->title}}</h6>
+            <h6 class="text-danger fs-3 pb-2">{{$project->type?->title}}</h6>
             <h6>{{ \Carbon\Carbon::parse($project->project_date)->format('d/m/Y') }}</h6>
             <h6><a href="{{$project->link_github}}">link progetto github</a></h6>
             
